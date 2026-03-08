@@ -208,6 +208,18 @@ python -m pytest tests/test_tools.py -v
 
 ---
 
+## Securite
+
+| Mesure | Implementation |
+|---|---|
+| Anti-boucle infinie | Callback `prevent_tool_loop` (`before_tool_callback`) qui bloque les appels d'outils en double via le state partage |
+| Anti-hallucination d'outils | Callback `strip_tools_after_use` (`before_model_callback`) qui retire les outils du LLM apres le premier appel reussi |
+| Routing deterministe | Callback `smart_router` (`before_model_callback`) qui route les requetes en Python sans passer par le LLM, evitant les erreurs de delegation |
+| Validation des entrees | Conversion `int()` avec `try/except` dans les outils, verification des valeurs vides et des limites min/max |
+| Secrets proteges | `.env` (config Ollama) dans `.gitignore`, jamais commite |
+
+---
+
 ## Modele utilise
 
 **Mistral 7B** via Ollama (local, pas de cle API necessaire).
