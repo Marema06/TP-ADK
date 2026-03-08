@@ -1,0 +1,27 @@
+[
+  {
+    "name": "test_flashcard_creation",
+    "data": [
+      {
+        "query": "Fiche sur les boucles Python",
+        "expected_tool_use": [
+          {
+            "tool_name": "transfer_to_agent",
+            "tool_input": {"agent_name": "flashcard_loop_workflow"}
+          },
+          {
+            "tool_name": "create_flashcard",
+            "tool_input": {}
+          }
+        ],
+        "expected_intermediate_agent_responses": [],
+        "reference": "Fiche de revision sur les boucles Python"
+      }
+    ],
+    "initial_session": {
+      "state": {},
+      "app_name": "assistant_revision",
+      "user_id": "test_user"
+    }
+  }
+]

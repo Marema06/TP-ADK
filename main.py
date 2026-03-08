@@ -37,7 +37,7 @@ async def run_conversation():
         user_id=USER_ID,
         session_id=session_id,
     )
-    print(f"✅ Session créée: {session_id[:8]}...")
+    print(f" Session créée: {session_id[:8]}...")
 
     # 3. Instancier le Runner avec l'agent root et le service de sessions
     runner = Runner(
@@ -47,7 +47,7 @@ async def run_conversation():
     )
 
     print("\n" + "=" * 60)
-    print("📚 Assistant de Révision — Multi-Agents ADK")
+    print(" Assistant de Révision — Multi-Agents ADK")
     print("=" * 60)
     print("Tape 'exit' ou 'quit' pour quitter.\n")
 

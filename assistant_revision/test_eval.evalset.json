@@ -1,0 +1,65 @@
+[
+  {
+    "name": "test_quiz_genere_questions",
+    "data": [
+      {
+        "query": "Quiz sur Python",
+        "expected_tool_use": [
+          {
+            "tool_name": "generate_questions",
+            "tool_input": {"subject": "Python", "count": 2}
+          }
+        ],
+        "expected_intermediate_agent_responses": [],
+        "reference": "Voici des questions de quiz sur Python"
+      }
+    ],
+    "initial_session": {
+      "state": {},
+      "app_name": "assistant_revision",
+      "user_id": "test_user"
+    }
+  },
+  {
+    "name": "test_flashcard_creation",
+    "data": [
+      {
+        "query": "Fiche sur les boucles Python",
+        "expected_tool_use": [
+          {
+            "tool_name": "create_flashcard",
+            "tool_input": {}
+          }
+        ],
+        "expected_intermediate_agent_responses": [],
+        "reference": "Voici une fiche de revision sur les boucles Python"
+      }
+    ],
+    "initial_session": {
+      "state": {},
+      "app_name": "assistant_revision",
+      "user_id": "test_user"
+    }
+  },
+  {
+    "name": "test_conseils_revision",
+    "data": [
+      {
+        "query": "Conseils de revision sur les algorithmes",
+        "expected_tool_use": [
+          {
+            "tool_name": "get_study_tips",
+            "tool_input": {}
+          }
+        ],
+        "expected_intermediate_agent_responses": [],
+        "reference": "Voici des conseils de revision sur les algorithmes"
+      }
+    ],
+    "initial_session": {
+      "state": {},
+      "app_name": "assistant_revision",
+      "user_id": "test_user"
+    }
+  }
+]
